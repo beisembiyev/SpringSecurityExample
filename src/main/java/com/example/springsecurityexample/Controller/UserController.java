@@ -4,16 +4,19 @@ import com.example.springsecurityexample.Models.Role;
 import com.example.springsecurityexample.Models.RoleToUser;
 import com.example.springsecurityexample.Models.MyUser;
 import com.example.springsecurityexample.Service.UserService;
+import io.swagger.annotations.Api;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
+import java.util.Arrays;
 import java.util.List;
 
 @RestController
 @RequestMapping("api")
+@Api( tags = "users")
 @RequiredArgsConstructor//instead of autowired
 public class UserController {
     private final UserService userService;
